@@ -31,7 +31,7 @@ public class eight {
 				+ "05886116467109405077541002256983155200055935729725"
 				+ "71636269561882670428252483600823257530420752963450";
 		long max = 0;
-		StringBuilder sb = new StringBuilder(str);
+		long start=System.currentTimeMillis();
 		for(int i=0;i<str.length()-12;i++) {
 			String word = str.substring(i, i+13);
 			long test = mul(word);
@@ -40,6 +40,8 @@ public class eight {
 				max = test;
 			}
 		}
-		System.out.println("The Answer is "+max);
+		System.out.println("The Answer is → "+max);
+        long end=System.currentTimeMillis();
+        System.out.println("Time for execution → "+(end-start)+"ms");
 	}
 }
